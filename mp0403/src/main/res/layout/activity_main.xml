@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="FrameLayout 실습"
+        android:textColor="#8BC34A"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- 왼쪽: 캐릭터와 왕관, 목걸이 아이템 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- 캐릭터 위에 드레스, 목걸이, 왕관을 겹쳐서 표시 -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <ImageView
+                    android:id="@+id/ivBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/body" />
+
+                <ImageView
+                    android:id="@+id/ivObjDress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="127dp"
+                    android:src="@drawable/dress1"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/ivObjNecklace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="125dp"
+                    android:src="@drawable/necklace1"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/ivObjCrown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/crown1"
+                    android:visibility="invisible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewCrown1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickChoice"
+                    android:src="@drawable/crown1" />
+
+                <ImageView
+                    android:id="@+id/imageViewCrown2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickChoice"
+                    android:src="@drawable/crown2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewNecklace1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickChoice"
+                    android:src="@drawable/necklace1" />
+
+                <ImageView
+                    android:id="@+id/imageViewNecklace2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="onClickChoice"
+                    android:src="@drawable/necklace2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 오른쪽: 드레스 아이템 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewDress1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickChoice"
+                android:src="@drawable/dress1" />
+
+            <ImageView
+                android:id="@+id/imageViewDress2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickChoice"
+                android:src="@drawable/dress2" />
+
+            <ImageView
+                android:id="@+id/imageViewDress3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:onClick="onClickChoice"
+                android:src="@drawable/dress3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClickChoice"
+        android:text="다시하기" />
+
+</LinearLayout>
