@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- 액션바 대신 사용할 툴바 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorBar"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ToolBar 실습"
+            android:textColor="#8BC34A"
+            android:textSize="25sp"
+            android:textStyle="bold|italic" />
+
+        <!-- 과일별 개수 안내 (체리=3, 레몬=6, 사과=8, 바나나=1) -->
+        <ImageView
+            android:id="@+id/imageLegend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/image" />
+
+        <!-- '과일 연산자 과일 연산자 과일 = 답' 식 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fruitA"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:srcCompat="@drawable/fruit1" />
+
+            <TextView
+                android:id="@+id/opA"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/fruitB"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:srcCompat="@drawable/fruit2" />
+
+            <TextView
+                android:id="@+id/opB"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/fruitC"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                app:srcCompat="@drawable/fruit3" />
+
+            <TextView
+                android:id="@+id/textEqual"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="="
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- 동그란 답 칸 배경 위에 숫자 입력 -->
+            <FrameLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/imageAnswerBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/answerbg" />
+
+                <EditText
+                    android:id="@+id/editAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:maxLength="3"
+                    android:textSize="18sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRestart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorBar"
+                android:text="다시 시작하기" />
+
+            <Button
+                android:id="@+id/btnResult"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorBar"
+                android:text="결과보기" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 기본 액션바 없이 레이아웃의 Toolbar를 앱 바로 사용 -->
+    <style name="Base.Theme.Mp0705" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorBar</item>
+        <item name="colorPrimaryVariant">@color/colorStatusBar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/colorStatusBar</item>
+    </style>
+
+    <style name="Theme.Mp0705" parent="Base.Theme.Mp0705" />
+</resources>
