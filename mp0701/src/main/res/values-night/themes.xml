@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 옵션 메뉴를 표시할 액션바가 있는 테마 -->
+    <style name="Base.Theme.Mp0701" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorBar</item>
+        <item name="colorPrimaryVariant">@color/colorBar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/colorBar</item>
+    </style>
+</resources>
