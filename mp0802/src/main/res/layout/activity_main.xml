@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TimePickerDialog 실습"
+        android:textColor="#8BC34A"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <!-- 시계 문제 그림 위에 오전/오후 표시와 정답 시간 그림을 겹쳐서 표시 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/question1" />
+
+        <!-- 정답을 맞히면 말풍선 안에 시간 표시 -->
+        <ImageView
+            android:id="@+id/imageAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/answer11" />
+
+        <ImageView
+            android:id="@+id/imageAmPm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            app:srcCompat="@drawable/time_am" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00ACC1"
+        android:text="시계 불러오기" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00ACC1"
+        android:text="다시 시작하기" />
+</LinearLayout>

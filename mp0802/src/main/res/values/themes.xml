@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Mp0802" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Mp0802" parent="Base.Theme.Mp0802" />
+
+    <!-- 시간 선택 대화상자 테마: 주황색 헤더, 살구색 배경, 파란색 선택 표시 -->
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#FF8A65</item>
+        <item name="colorControlActivated">#2196F3</item>
+        <item name="android:windowBackground">#FAC980</item>
+        <item name="android:textColorPrimary">#888A8A</item>
+        <item name="android:textColorSecondary">#E91E63</item>
+        <item name="android:textColorPrimaryInverse">#FFF176</item>
+        <item name="android:textColorSecondaryInverse">#FFFFFF</item>
+    </style>
+</resources>
