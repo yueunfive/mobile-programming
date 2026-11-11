@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 선택(activated)된 항목은 노란색, 누르고 있는 동안은 연한 노란색 배경 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/item_selected" android:state_activated="true" />
+    <item android:drawable="@color/item_pressed" android:state_pressed="true" />
+    <item android:drawable="@android:color/transparent" />
+</selector>
